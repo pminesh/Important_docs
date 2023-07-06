@@ -1,0 +1,39 @@
+-----> git status
+==============================================
+git stash
+git stash list
+git pull origin brancheName
+git checkout -b branch_name
+git stash apply stash@{0}
+git commit -m "commit name"
+git push origin brancheName
+
+
+git add .  ===> add file for push if all file you can add this command can used.
+git branch ===> list all branch
+
+============================================== if user name and password not wrok create token
+- (settings/ developer setting/ personal access token/ generate new token)
+
+============================================== Set config
+git config --global user.name "mrizwanashiq"
+git config --global user.email "mrizwanashiq@outlook"
+git config --list
+
+============================================== Revert back commit and update
+git reset HEAD~ 				-- get latest push code
+git log --oneline
+git add .
+git commit -m "replace commit message"
+git push origin master --force
+
+git reset --hard main@{"10 minutes ago"} -- last 10 minute pull you need to remove
+
+git fetch --all ---> fetch all branch
+
+gaurav-soni-12
+1432Gaurav@
+
+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
+
+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-minesh

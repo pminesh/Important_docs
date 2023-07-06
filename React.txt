@@ -1,0 +1,17 @@
+===> higher-order component (HOC)
+===> echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p <=======Soultion-Error=====> Error: ENOSPC: System limit for number of file watchers reached, watch
+
+
+1. Project setup
+2. Create js pages
+3. HOC(higher order component)
+4. Routes
+5. Components and Props
+6. Hooks(useState, useEffect)
+7. axios(API)
+8. MUI
+9. Redux
+10. Protected route
+11. Toast Messages
+12. Field Validations(ex:formik)
+

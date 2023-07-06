@@ -1,0 +1,54 @@
+1. sudo -u postgres psql ------>start postgres in terminal
+2. \l -------> show database listing
+3. CREATE DATABASE library_management; ----> create new database
+4. \c library_management ----> go into database
+5. SELECT * FROM books_tbl; -----> show data from table
+6. \tb ---> show table listing
+
+You can display all the available extensions with this command
+- select * from pg_available_extensions;
+
+Now install the uuid-ossp module with this command
+-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+error solve-------------> PermissionError: [Errno 13] Permission denied: '/home/ts/Desktop/Rory/Squire_Back_End/data/db'-------------->sudo rm -rf data
+migrate using docker---------------->sudo docker-compose run web python manage.py migrate //  docker-compose exec web python manage.py migrate
+
+
+------> sudo service postgresql stop ==> postgres start and stop from terminal
+
+------> sudo lsof -i:5432 ==> check on 5432 port any server is running or not
+
+------> sudo kill -9 PID Digilocker Authorisation
+
+======================================================================================================================================================================================== 
+31/01/2023 ========= 9:30 to 7:45 ========= extra 45 minutes
+06/02/2023 ========= 9:30 to 7:15 ========= extra 15 minutes
+08/02/2023 ========= 9:30 to 7:30 ========= extra 30 minutes
+24/02/2023 ========= 9:30 to 7:30 ========= extra 30 minutes
+27/02/2023 ========= 9:30 to 7:30 ========= extra 30 minutes
+07/03/2023 ========= 11:00PM to 11:30PM ======== extra 30 minutes
+16/03/2023 ========= 7:00PM to 8:30PM ======== extra 1:30 minutes
+
+11/04/2023 ========= break meeting 1:30 to 2:00 = 30 minutes + night production 9:45 to 11:15 = 1:30 hour ======= extra 2 hours
+ 
+
+
+Hello,
+
+Following are the updates of 05-07-2023:
+
+Today's Update:
+  - I have learned about Redux-Installation in ReactJS and integrated.
+  - I have learned about Redux-Core Concepts in ReactJS  and integrated.
+  - I have learned about Redux-Data Flow in ReactJS.
+  - I have learned about Redux-Store in ReactJS and integrated.
+  - I have learned about Redux-Actions in ReactJS.
+  - I have learned about Redux-Reducers in RectJs and integrated.
+  - I have learned about Redux-Devtools in RectJs and integrated.
+  
+Now I am leaving for the day.
+
+Thank you
+
+

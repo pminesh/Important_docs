@@ -1,0 +1,32 @@
+----> Database
+
+----> Authentication
+
+----> Device integration
+
+----> Auto scan device
+
+----> Addons
+
+----> True image
+
+----> Alexa
+
+=============step============
+1. Analysis
+
+2. Database design
+
+3. Web / Web socket API
+	-User
+	-Device
+	-Scene
+	-Trigger
+	-True Image
+	-Permissions
+	
+4. API integration with React
+
+5. Testing
+
+6. Adding New Modules

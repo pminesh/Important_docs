@@ -1,0 +1,47 @@
+https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html
+================================================================================
+#PROJECT/celery.py
+
+import os
+
+from celery import Celery
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PROJECT_NAME.settings')
+
+app = Celery('PROJECT_NAME')
+app.config_from_object('django.conf:settings', namespace='CELERY')
+
+app.conf.timezone = 'CET'
+app.autodiscover_tasks()
+
+@app.task(bind=True)
+def debug_task(self):
+    print(f'Request: {self.request!r}')
+-------------------------------------------------------------------------------------
+
+#APP/tasks.py 
+from celery import shared_task
+
+@shared_task()
+def create_consumptions_data():
+---------------------------------------------------------------------------------------
+#settings.py
+# pip install django-celery-beat
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    "create_consumptions_data-every-afternoon": {
+        "task": "app.tasks.create_consumptions_data",
+        "schedule": crontab(minute=50,hour=8), #pip install python-crontab
+    },
+}
+
+#settings.py
+# CELERY Setup
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+# pip install Redis
+# sudo service redis-server start
+
+# START celery
+celery -A project worker --beat -l info
